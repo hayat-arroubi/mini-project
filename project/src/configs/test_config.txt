@@ -1,0 +1,46 @@
+# Exemple de fichier de configuration pour le simulateur d'ordonnancement
+# Format:
+# process <nom> <date_arrivée>
+# cpu <durée>
+# io <durée>
+# ...
+# 
+# Les lignes commençant par # sont des commentaires
+# Les lignes vides sont ignorées
+
+# Processus P1: arrive à t=0, séquence CPU-IO-CPU
+process P1 0
+cpu 5
+io 3
+cpu 2
+priority 1
+
+# Processus P2: arrive à t=2, séquence CPU-IO-CPU-IO-CPU
+process P2 2
+cpu 3
+io 2
+cpu 4
+io 1
+cpu 1
+priority 2
+
+# Processus P3: arrive à t=4, séquence CPU-IO-CPU
+process P3 4
+cpu 2
+io 4
+cpu 6
+priority 3
+
+# Processus P4: arrive à t=6, séquence CPU uniquement
+process P4 6
+cpu 7
+priority 1
+
+# Processus P5: arrive à t=8, séquence CPU-IO-CPU-IO-CPU
+process P5 8
+cpu 1
+io 2
+cpu 3
+io 1
+cpu 2
+priority 2
